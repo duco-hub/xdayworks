@@ -92,7 +92,7 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 200px; /* Forceert gelijke hoogte */
+    min-height: 200px;
 }
 
 .icon-service, .icon-wrapper {
@@ -115,7 +115,7 @@ nav a {
     filter: sepia(100%) hue-rotate(160deg) saturate(150%) brightness(80%);
 }
 
-/* Slideshow Fix */
+/* Slideshow - Aangepast voor 12 logo's */
 .clients {
     background-color: #f2f2f2;
     padding: 60px 0;
@@ -126,8 +126,8 @@ nav a {
 
 .slider-track {
     display: flex;
-    width: calc(250px * 12);
-    animation: scroll 30s linear infinite;
+    width: calc(250px * 12); /* 6 logo's + 6 kopieën */
+    animation: scroll 40s linear infinite; /* Iets trager voor rustig effect */
     align-items: center;
 }
 
@@ -135,7 +135,7 @@ nav a {
     height: 70px;
     width: 200px;
     margin: 0 40px;
-    object-fit: contain; /* Houdt verhouding Domino's goed */
+    object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.6;
 }
@@ -187,36 +187,14 @@ footer .section-title { color: white; margin-top: 0; }
     text-decoration: none;
     margin: 0;
 }
-/* Mobiele aanpassingen (voor schermen kleiner dan 768px) */
+
+/* Mobiele aanpassingen */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Logo en menu onder elkaar */
-        gap: 15px;
-    }
-
-    nav ul {
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin: 0 10px; /* Meer ruimte tussen menu-items op mobiel */
-    }
-
-    .hero h1 {
-        font-size: 2.5rem; /* Iets kleinere tekst voor mobiel */
-    }
-
-    .hero {
-        padding: 60px 20px; /* Iets minder witruimte boven/onder */
-    }
-
-    .contact-grid {
-        flex-direction: column; /* Contactopties recht onder elkaar */
-        gap: 30px;
-    }
-
-    .slider-track img {
-        width: 150px; /* Iets kleinere logo's in de slider op mobiel */
-        margin: 0 20px;
-    }
+    nav { flex-direction: column; gap: 15px; }
+    nav ul { margin-top: 10px; }
+    nav ul li { margin: 0 10px; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero { padding: 60px 20px; }
+    .contact-grid { flex-direction: column; gap: 30px; }
+    .slider-track img { width: 150px; margin: 0 20px; }
 }
